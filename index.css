@@ -1,0 +1,112 @@
+body {
+    background-color: aqua;
+}
+
+.container {
+    background-color: rgb(71, 185, 223);
+    margin: 10px;
+    height: 300px;
+
+    display: flex;
+    flex-direction: row;
+    /* column,column-reverse,row,row-reverse */
+    /*flex-wrap: wrap;
+     wrap,no-wrap(basically does the reverse) */
+    justify-content: center;
+    /* center,flex-start,flex-end - they are the main ones
+    space-between,space-around*/
+    align-items: center;
+    /* center,flex-start,flex-end - they are the main ones
+    special include- stretch(from top to bottom),baseline*/
+}
+
+.container-item {
+    background-color: rgb(177, 187, 194);
+    color: white;
+    font-size: 25px;
+    text-align: center;
+
+    width: 70px;
+    line-height: 50px;
+    margin: 10px;
+}
+
+.grid-container {
+    background: rgb(102, 102, 32);
+    margin: 10px;
+    height: 300px;
+
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    /* grid-gap: 100px 150px; */
+
+    /* justify-content: space-around;
+    /* there are three types of justification: center, start, end. Some special ones are: space-evenly, space-around*/
+    /* align-content: space-around;
+    there are three standard types of aligning content: center, start, end. Some special ones are: space-evenly, space-around */
+
+}
+
+.grid-item {
+    color: blue;
+    font-size: 25px;
+    text-align: center;
+
+    width: 70px;
+    line-height: 40px;
+    margin: 10px;
+}
+
+.submit-button {
+    margin: 20px 10px;
+    padding: 10px 15px;
+    border: none;
+    text-decoration: none;
+    font-family: "lato", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: white;
+    background: rgb(89, 150, 255);
+    /* transform: translate(50px, 30px);
+    transform: scale(2.5);
+    transform: rotate(-45deg); */
+    transform: matrix(1, 0.45, 0.45, 1, 100, 50);
+    /* transition: background 300ms ease-in-out 466ms; duration transitionStyle(ease, linear, ease-in-out) delay*/
+    transition: all 500ms ease;
+}
+
+.submit-button:hover {
+    /* color: black; */
+    background: rgb(147, 187, 255);
+    padding: 20px 30px;
+
+}
+
+#about-me {
+    /* animation-name: red-to-black;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-delay: 2s; 
+    animation-iteration-count: infinite;
+    animation-direction: normal; */
+    /* five main properties */
+    animation: red-to-black 4s linear 2s infinite normal;
+}
+
+@keyframes red-to-black {
+    0% {
+        background: red;
+        transform: translate(0px, 0px);
+    }
+
+    50% {
+        background: yellow;
+        transform: translate(10px, 10px);
+    }
+
+    100% {
+        background: black;
+        transform: translate(20px, 20px);
+    }
+}
