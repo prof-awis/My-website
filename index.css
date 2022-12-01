@@ -18,6 +18,7 @@ body {
     align-items: center;
     /* center,flex-start,flex-end - they are the main ones
     special include- stretch(from top to bottom),baseline*/
+    
 }
 
 .container-item {
